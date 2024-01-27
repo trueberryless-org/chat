@@ -34,7 +34,14 @@
             if (chatterGuidString != null)
             {
                 var chatterGuid = Guid.Parse(chatterGuidString);
-                NavigationManager.NavigateTo($"groupchat/{chatterGuid}");
+                try
+                {
+                    NavigationManager.NavigateTo($"groupchat/{chatterGuid}");
+                }
+                catch
+                {
+                    await LocalStorage.DeleteAsync("groupChatId");
+                }
             }
         }
     }

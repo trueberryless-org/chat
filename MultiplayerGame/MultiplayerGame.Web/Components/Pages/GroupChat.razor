@@ -5,7 +5,7 @@
 
 @if (_chat != null && _chatter != null)
 {
-    <PageTitle>Chatter @_chat.Chatters.IndexOf(_chatter)</PageTitle>
+    <PageTitle>Group Chat - @_chatter.Name</PageTitle>
 
     <div id="chat-container">
         <div id="chat-messages">
@@ -34,7 +34,7 @@
                             {
                                 <span class="chatter-name chatter-them">@message.Chatter.Name - @message.Chatter.Age</span>
                             }
-                            <span class="timestamp">@message.Posted.ToString("HH:mm:ss")</span>
+                            <span class="timestamp">@message.Posted.ToLocalTime().ToString("HH:mm:ss")</span>
                         </div>
                     }
                     <div class="message-content">@message.Content</div>
