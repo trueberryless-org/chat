@@ -1,6 +1,9 @@
 ﻿@page "/groupchat/{ChatterGuidString}"
 @using MultiplayerGame.Web.Components.Services
+@using Microsoft.AspNetCore.Components.Server.ProtectedBrowserStorage
 @inject MatchmakingGroupChat Matchmaking
+@inject ProtectedLocalStorage LocalStorage
+@inject NavigationManager NavigationManager
 @rendermode InteractiveServer
 
 @if (_chat != null && _chatter != null)
@@ -40,6 +43,12 @@
                     <div class="message-content">@message.Content</div>
                 </div>
             }
+            @if (_chat.Status.Messages.Count == 0)
+            {
+                <div class="centered">
+                    Empty Chat History
+                </div>
+            }
         </div>
         <div id="chat-input">
             <input type="text" @bind="newMessage" @onkeyup="HandleKeyDown"/>
@@ -49,7 +58,7 @@
 }
 else
 {
-    <p class="p-4">Sometimes you end up at the wrong place at the wrong time...</p>
+    <p class="p-4">Authorizing...</p>
 }
 
 @code {
@@ -60,12 +69,20 @@ else
 
     private string newMessage = "";
 
-    protected override void OnParametersSet()
+    protected override async Task OnAfterRenderAsync(bool firstRender)
     {
-        _chat = Matchmaking.GroupChat;
-        _chatter = _chat.Chatters.FirstOrDefault(c => c.Id == Guid.Parse(ChatterGuidString));
+        if (firstRender)
+        {
+            _chat = Matchmaking.GroupChat;
+            _chatter = _chat.Chatters.FirstOrDefault(c => c.Id == Guid.Parse(ChatterGuidString));
 
-        if (_chat != null) _chat.UpdateClients += HandleUpdateClients;
+            if (_chat != null) _chat.UpdateClients += HandleUpdateClients;
+            if (_chatter == null)
+            {
+                await LocalStorage.DeleteAsync("groupChatId");
+                NavigationManager.NavigateTo("groupchat");
+            }
+        }
     }
 
     private async void HandleUpdateClients(object sender, EventArgs e)
@@ -104,6 +121,7 @@ else
     }
     
     #chat-container {
+        position: relative;
         max-width: 100%;
         margin: 0px auto;
         border: 1px solid #ccc;
@@ -120,6 +138,13 @@ else
         padding: 10px;
         display: flex;
         flex-direction: column-reverse;
+    }
+    
+    .centered {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
     
     .message {
