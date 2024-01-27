@@ -3,9 +3,9 @@
 @inject MatchmakingGroupChat Matchmaking
 @rendermode InteractiveServer
 
-@if (_chat != null)
+@if (_chat != null && _chatter != null)
 {
-    <PageTitle>Chatter @_chat.Chatters.IndexOf(_chatterGuid)</PageTitle>
+    <PageTitle>Chatter @_chat.Chatters.IndexOf(_chatter)</PageTitle>
 
     <div id="chat-container">
         <div id="chat-messages">
@@ -26,13 +26,13 @@
                     @if (showMetaInfo)
                     {
                         <div class="meta-info">
-                            @if (@message.Chatter == _chatterGuid)
+                            @if (message.Chatter.Id == _chatter.Id)
                             {
                                 <span class="chatter-name chatter-you">You</span>
                             }
                             else
                             {
-                                <span class="chatter-name chatter-them">Chatter @_chat.Chatters.IndexOf(message.Chatter)</span>
+                                <span class="chatter-name chatter-them">@_chatter.Name - @_chatter.Age</span>
                             }
                             <span class="timestamp">@message.Posted.ToString("HH:mm:ss")</span>
                         </div>
@@ -55,7 +55,7 @@ else
 @code {
     [Parameter] public string ChatterGuidString { get; set; }
 
-    private Guid _chatterGuid;
+    private Person? _chatter;
     private GroupChatController? _chat;
 
     private string newMessage = "";
@@ -63,7 +63,7 @@ else
     protected override void OnParametersSet()
     {
         _chat = Matchmaking.GroupChat;
-        _chatterGuid = Guid.Parse(ChatterGuidString);
+        _chatter = _chat.Chatters.FirstOrDefault(c => c.Id == Guid.Parse(ChatterGuidString));
 
         if (_chat != null) _chat.UpdateClients += HandleUpdateClients;
     }
@@ -83,16 +83,15 @@ else
 
     private void SendMessage()
     {
-        if (!string.IsNullOrWhiteSpace(newMessage))
+        if (string.IsNullOrWhiteSpace(newMessage) || _chat == null || _chatter == null) return;
+        
+        _chat.Status.Messages.Add(new GroupMessage
         {
-            _chat.Status.Messages.Add(new Message
-            {
-                Chatter = _chatterGuid, // Replace with actual chatter name
-                Content = newMessage,
-                Posted = DateTime.Now
-            });
-            newMessage = "";
-        }
+            Chatter = _chatter, // Replace with actual chatter name
+            Content = newMessage,
+            Posted = DateTime.Now
+        });
+        newMessage = "";
     }
 
 }

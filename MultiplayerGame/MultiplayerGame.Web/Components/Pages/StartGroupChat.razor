@@ -1,14 +1,54 @@
 ﻿@page "/groupchat"
 @using MultiplayerGame.Web.Components.Services
+@using Microsoft.AspNetCore.Components.Server.ProtectedBrowserStorage
 @inject MatchmakingGroupChat Matchmaking
 @inject NavigationManager NavigationManager
+@inject ProtectedLocalStorage LocalStorage
+@rendermode InteractiveServer
+
+<PageTitle>Group Chat</PageTitle>
+
+<div class="p-4">
+    <h1>Enter Group Chat!</h1>
+
+    <label for="name">Name:</label>
+    <input id="name" @bind="name" />
+
+    <label for="age">Age:</label>
+    <input id="age" @bind="age" />
+
+    <button @onclick="async () => await JoinGroup()" disabled="@(!IsValid)">Join</button>
+</div>
 
 @code {
+    private string name;
+    private int age;
+    private bool IsValid => !string.IsNullOrEmpty(name) && age > 0;
 
-    protected override void OnParametersSet()
+    protected override async Task OnAfterRenderAsync(bool firstRender)
     {
-        var chatterGuid = Matchmaking.JoinGroupChat();
-        NavigationManager.NavigateTo($"groupchat/{chatterGuid}");
+        if (firstRender)
+        {
+            // Retrieve values from localStorage on component initialization
+            var chatterGuidString = (await LocalStorage.GetAsync<string>("groupChatId")).Value;
+            if (chatterGuidString != null)
+            {
+                var chatterGuid = Guid.Parse(chatterGuidString);
+                NavigationManager.NavigateTo($"groupchat/{chatterGuid}");
+            }
+        }
     }
 
+    async Task JoinGroup()
+    {
+        if (!IsValid) return;
+
+        // Assuming JoinGroupChat method takes name and age as parameters
+        var chatterGuid = Matchmaking.JoinGroupChat(name, age);
+        
+        // Save values to localStorage
+        await LocalStorage.SetAsync("groupChatId", chatterGuid);
+        
+        NavigationManager.NavigateTo($"groupchat/{chatterGuid}");
+    }
 }

@@ -4,16 +4,16 @@ public class GroupChatController : EventArgs, IDisposable, IAsyncDisposable
 {
     public Guid ChatId { get; set; } = Guid.NewGuid();
 
-    public List<Guid> Chatters { get; set; } = [];
+    public List<Person> Chatters { get; set; } = [];
 
-    public ChatStatus Status { get; set; }
+    public GroupChatStatus Status { get; set; }
 
     public event EventHandler UpdateClients;
     private Timer timer;
 
     public GroupChatController()
     {
-        Status = new ChatStatus();
+        Status = new GroupChatStatus();
 
         UpdateClients += HandleUpdateClients;
         timer = new Timer(RaiseEvent, null, 0, 500);
@@ -42,5 +42,19 @@ public class GroupChatController : EventArgs, IDisposable, IAsyncDisposable
 
 public class GroupChatStatus
 {
-    public List<Message> Messages { get; set; } = [];
+    public List<GroupMessage> Messages { get; set; } = [];
+}
+
+public class GroupMessage
+{
+    public Person Chatter { get; set; }
+    public string Content { get; set; }
+    public DateTime Posted { get; set; }
+}
+
+public class Person
+{
+    public Guid Id { get; set; }
+    public string Name { get; set; }
+    public int Age { get; set; }
 }
