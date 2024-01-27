@@ -1,0 +1,81 @@
+﻿@page "/game/{GameGuidString}/{PlayerGuidString}"
+@using MultiplayerGame.Web.Components.Services
+@inject Matchmaking Matchmaking
+@rendermode InteractiveServer
+
+<div class="p-4">
+    @if (_game != null)
+    {
+        @if (_game.PlayerOne == _playerGuid)
+        {
+            <PageTitle>Player 1</PageTitle>
+        }
+        else
+        {
+            <PageTitle>Player 2</PageTitle>
+        }
+
+        <h3>Game</h3>
+
+        <p>Game Id: @_game.GameId</p>
+        <p>Player Id: @_playerGuid</p>
+
+        @if (_game.PlayersReady())
+        {
+            <p>Game Status: @_game.Status.RandomString</p>
+
+            <button @onclick="NewString">New Sentence!</button>
+        }
+        else
+        {
+            <p>Waiting for the other player...</p>
+        }
+    }
+    else
+    {
+        <p>This game has unfortunately been deleted...</p>
+    }
+</div>
+
+@code {
+    [Parameter] public string GameGuidString { get; set; }
+    [Parameter] public string PlayerGuidString { get; set; }
+
+    private Guid _playerGuid;
+    private GameController? _game;
+
+    protected override void OnParametersSet()
+    {
+        _game = Matchmaking.Game(Guid.Parse(GameGuidString));
+        _playerGuid = Guid.Parse(PlayerGuidString);
+
+
+        if (_game != null) _game.UpdateClients += HandleUpdateClients;
+    }
+
+    private async void HandleUpdateClients(object sender, EventArgs e)
+    {
+        await InvokeAsync(() => StateHasChanged());
+    }
+
+    private void NewString()
+    {
+        if (_game != null) _game.Status.RandomString = GenerateRandomSentence();
+    }
+
+    static Random random = new Random();
+
+    static string[] subjects = { "The cat", "A dog", "A bird", "My friend", "The sun" };
+    static string[] verbs = { "jumps", "runs", "flies", "sings", "laughs" };
+    static string[] objects = { "over the moon", "through the forest", "into the sky", "with joy", "around the corner" };
+
+    static string GenerateRandomSentence()
+    {
+        string subject = subjects[random.Next(subjects.Length)];
+        string verb = verbs[random.Next(verbs.Length)];
+        string obj = objects[random.Next(objects.Length)];
+
+        return $"{subject} {verb} {obj}.";
+    }
+
+}
