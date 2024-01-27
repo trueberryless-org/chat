@@ -1,0 +1,14 @@
+﻿@page "/groupchat"
+@using MultiplayerGame.Web.Components.Services
+@inject MatchmakingGroupChat Matchmaking
+@inject NavigationManager NavigationManager
+
+@code {
+
+    protected override void OnInitialized()
+    {
+        var chatterGuid = Matchmaking.JoinGroupChat();
+        NavigationManager.NavigateTo($"groupchat/{chatterGuid}");
+    }
+
+}

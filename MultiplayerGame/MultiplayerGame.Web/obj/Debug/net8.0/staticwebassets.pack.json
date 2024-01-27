@@ -1,23 +1,23 @@
 {
   "Files": [
     {
-      "Id": "D:\\repos\\school\\202324_sew_5ahit_felixschneider\\MultiplayerGame\\MultiplayerGame\\MultiplayerGame.Web\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\MultiplayerGame.Web.bundle.scp.css",
+      "Id": "D:\\repos\\school\\202324_sew_5ahit_felixschneider\\chat\\MultiplayerGame\\MultiplayerGame.Web\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\MultiplayerGame.Web.bundle.scp.css",
       "PackagePath": "staticwebassets\\MultiplayerGame.Web.bundle.scp.css"
     },
     {
-      "Id": "D:\\repos\\school\\202324_sew_5ahit_felixschneider\\MultiplayerGame\\MultiplayerGame\\MultiplayerGame.Web\\wwwroot\\app.css",
+      "Id": "D:\\repos\\school\\202324_sew_5ahit_felixschneider\\chat\\MultiplayerGame\\MultiplayerGame.Web\\wwwroot\\app.css",
       "PackagePath": "staticwebassets\\app.css"
     },
     {
-      "Id": "D:\\repos\\school\\202324_sew_5ahit_felixschneider\\MultiplayerGame\\MultiplayerGame\\MultiplayerGame.Web\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "Id": "D:\\repos\\school\\202324_sew_5ahit_felixschneider\\chat\\MultiplayerGame\\MultiplayerGame.Web\\wwwroot\\bootstrap\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Id": "D:\\repos\\school\\202324_sew_5ahit_felixschneider\\MultiplayerGame\\MultiplayerGame\\MultiplayerGame.Web\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "Id": "D:\\repos\\school\\202324_sew_5ahit_felixschneider\\chat\\MultiplayerGame\\MultiplayerGame.Web\\wwwroot\\bootstrap\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Id": "D:\\repos\\school\\202324_sew_5ahit_felixschneider\\MultiplayerGame\\MultiplayerGame\\MultiplayerGame.Web\\wwwroot\\favicon.png",
+      "Id": "D:\\repos\\school\\202324_sew_5ahit_felixschneider\\chat\\MultiplayerGame\\MultiplayerGame.Web\\wwwroot\\favicon.png",
       "PackagePath": "staticwebassets\\favicon.png"
     },
     {

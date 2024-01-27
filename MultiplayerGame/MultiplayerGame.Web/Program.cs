@@ -17,6 +17,7 @@ builder.Services.AddHttpClient<WeatherApiClient>(client => client.BaseAddress = 
 
 builder.Services.AddSingleton<Matchmaking>();
 builder.Services.AddSingleton<MatchmakingChat>();
+builder.Services.AddSingleton<MatchmakingGroupChat>();
 
 var app = builder.Build();
 

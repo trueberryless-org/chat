@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "J8FsKIiIbDtzCubnlj3PMCuPmBfFB8OFedgWlJi6W48=",
+  "Hash": "Yb2NgAJ0sRsEOtjWBHIFg5W1UgQ4Z8lUefI2Z8ZPwaw=",
   "Source": "MultiplayerGame.Web",
   "BasePath": "_content/MultiplayerGame.Web",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "MultiplayerGame.Web\\wwwroot",
       "Source": "MultiplayerGame.Web",
-      "ContentRoot": "D:\\repos\\school\\202324_sew_5ahit_felixschneider\\MultiplayerGame\\MultiplayerGame\\MultiplayerGame.Web\\wwwroot\\",
+      "ContentRoot": "D:\\repos\\school\\202324_sew_5ahit_felixschneider\\chat\\MultiplayerGame\\MultiplayerGame.Web\\wwwroot\\",
       "BasePath": "_content/MultiplayerGame.Web",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "D:\\repos\\school\\202324_sew_5ahit_felixschneider\\MultiplayerGame\\MultiplayerGame\\MultiplayerGame.Web\\obj\\Debug\\net8.0\\scopedcss\\bundle\\MultiplayerGame.Web.styles.css",
+      "Identity": "D:\\repos\\school\\202324_sew_5ahit_felixschneider\\chat\\MultiplayerGame\\MultiplayerGame.Web\\obj\\Debug\\net8.0\\scopedcss\\bundle\\MultiplayerGame.Web.styles.css",
       "SourceId": "MultiplayerGame.Web",
       "SourceType": "Computed",
-      "ContentRoot": "D:\\repos\\school\\202324_sew_5ahit_felixschneider\\MultiplayerGame\\MultiplayerGame\\MultiplayerGame.Web\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "ContentRoot": "D:\\repos\\school\\202324_sew_5ahit_felixschneider\\chat\\MultiplayerGame\\MultiplayerGame.Web\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
       "BasePath": "_content/MultiplayerGame.Web",
       "RelativePath": "MultiplayerGame.Web.styles.css",
       "AssetKind": "All",
@@ -33,13 +33,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "D:\\repos\\school\\202324_sew_5ahit_felixschneider\\MultiplayerGame\\MultiplayerGame\\MultiplayerGame.Web\\obj\\Debug\\net8.0\\scopedcss\\bundle\\MultiplayerGame.Web.styles.css"
+      "OriginalItemSpec": "D:\\repos\\school\\202324_sew_5ahit_felixschneider\\chat\\MultiplayerGame\\MultiplayerGame.Web\\obj\\Debug\\net8.0\\scopedcss\\bundle\\MultiplayerGame.Web.styles.css"
     },
     {
-      "Identity": "D:\\repos\\school\\202324_sew_5ahit_felixschneider\\MultiplayerGame\\MultiplayerGame\\MultiplayerGame.Web\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\MultiplayerGame.Web.bundle.scp.css",
+      "Identity": "D:\\repos\\school\\202324_sew_5ahit_felixschneider\\chat\\MultiplayerGame\\MultiplayerGame.Web\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\MultiplayerGame.Web.bundle.scp.css",
       "SourceId": "MultiplayerGame.Web",
       "SourceType": "Computed",
-      "ContentRoot": "D:\\repos\\school\\202324_sew_5ahit_felixschneider\\MultiplayerGame\\MultiplayerGame\\MultiplayerGame.Web\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "D:\\repos\\school\\202324_sew_5ahit_felixschneider\\chat\\MultiplayerGame\\MultiplayerGame.Web\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/MultiplayerGame.Web",
       "RelativePath": "MultiplayerGame.Web.bundle.scp.css",
       "AssetKind": "All",
@@ -52,13 +52,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "D:\\repos\\school\\202324_sew_5ahit_felixschneider\\MultiplayerGame\\MultiplayerGame\\MultiplayerGame.Web\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\MultiplayerGame.Web.bundle.scp.css"
+      "OriginalItemSpec": "D:\\repos\\school\\202324_sew_5ahit_felixschneider\\chat\\MultiplayerGame\\MultiplayerGame.Web\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\MultiplayerGame.Web.bundle.scp.css"
     },
     {
-      "Identity": "D:\\repos\\school\\202324_sew_5ahit_felixschneider\\MultiplayerGame\\MultiplayerGame\\MultiplayerGame.Web\\wwwroot\\app.css",
+      "Identity": "D:\\repos\\school\\202324_sew_5ahit_felixschneider\\chat\\MultiplayerGame\\MultiplayerGame.Web\\wwwroot\\app.css",
       "SourceId": "MultiplayerGame.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\repos\\school\\202324_sew_5ahit_felixschneider\\MultiplayerGame\\MultiplayerGame\\MultiplayerGame.Web\\wwwroot\\",
+      "ContentRoot": "D:\\repos\\school\\202324_sew_5ahit_felixschneider\\chat\\MultiplayerGame\\MultiplayerGame.Web\\wwwroot\\",
       "BasePath": "_content/MultiplayerGame.Web",
       "RelativePath": "app.css",
       "AssetKind": "All",
@@ -74,10 +74,10 @@
       "OriginalItemSpec": "wwwroot\\app.css"
     },
     {
-      "Identity": "D:\\repos\\school\\202324_sew_5ahit_felixschneider\\MultiplayerGame\\MultiplayerGame\\MultiplayerGame.Web\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "Identity": "D:\\repos\\school\\202324_sew_5ahit_felixschneider\\chat\\MultiplayerGame\\MultiplayerGame.Web\\wwwroot\\bootstrap\\bootstrap.min.css",
       "SourceId": "MultiplayerGame.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\repos\\school\\202324_sew_5ahit_felixschneider\\MultiplayerGame\\MultiplayerGame\\MultiplayerGame.Web\\wwwroot\\",
+      "ContentRoot": "D:\\repos\\school\\202324_sew_5ahit_felixschneider\\chat\\MultiplayerGame\\MultiplayerGame.Web\\wwwroot\\",
       "BasePath": "_content/MultiplayerGame.Web",
       "RelativePath": "bootstrap/bootstrap.min.css",
       "AssetKind": "All",
@@ -93,10 +93,10 @@
       "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Identity": "D:\\repos\\school\\202324_sew_5ahit_felixschneider\\MultiplayerGame\\MultiplayerGame\\MultiplayerGame.Web\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "Identity": "D:\\repos\\school\\202324_sew_5ahit_felixschneider\\chat\\MultiplayerGame\\MultiplayerGame.Web\\wwwroot\\bootstrap\\bootstrap.min.css.map",
       "SourceId": "MultiplayerGame.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\repos\\school\\202324_sew_5ahit_felixschneider\\MultiplayerGame\\MultiplayerGame\\MultiplayerGame.Web\\wwwroot\\",
+      "ContentRoot": "D:\\repos\\school\\202324_sew_5ahit_felixschneider\\chat\\MultiplayerGame\\MultiplayerGame.Web\\wwwroot\\",
       "BasePath": "_content/MultiplayerGame.Web",
       "RelativePath": "bootstrap/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -112,10 +112,10 @@
       "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Identity": "D:\\repos\\school\\202324_sew_5ahit_felixschneider\\MultiplayerGame\\MultiplayerGame\\MultiplayerGame.Web\\wwwroot\\favicon.png",
+      "Identity": "D:\\repos\\school\\202324_sew_5ahit_felixschneider\\chat\\MultiplayerGame\\MultiplayerGame.Web\\wwwroot\\favicon.png",
       "SourceId": "MultiplayerGame.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\repos\\school\\202324_sew_5ahit_felixschneider\\MultiplayerGame\\MultiplayerGame\\MultiplayerGame.Web\\wwwroot\\",
+      "ContentRoot": "D:\\repos\\school\\202324_sew_5ahit_felixschneider\\chat\\MultiplayerGame\\MultiplayerGame.Web\\wwwroot\\",
       "BasePath": "_content/MultiplayerGame.Web",
       "RelativePath": "favicon.png",
       "AssetKind": "All",
