@@ -4348,11 +4348,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\repos\\school\\202324_sew_5ahit_felixschneider\\MultiplayerGame\\MultiplayerGame\\MultiplayerGame.AppHost\\MultiplayerGame.AppHost.csproj",
+      "projectUniqueName": "D:\\repos\\school\\202324_sew_5ahit_felixschneider\\chat\\MultiplayerGame\\MultiplayerGame.AppHost\\MultiplayerGame.AppHost.csproj",
       "projectName": "MultiplayerGame.AppHost",
-      "projectPath": "D:\\repos\\school\\202324_sew_5ahit_felixschneider\\MultiplayerGame\\MultiplayerGame\\MultiplayerGame.AppHost\\MultiplayerGame.AppHost.csproj",
+      "projectPath": "D:\\repos\\school\\202324_sew_5ahit_felixschneider\\chat\\MultiplayerGame\\MultiplayerGame.AppHost\\MultiplayerGame.AppHost.csproj",
       "packagesPath": "C:\\Users\\trueb\\.nuget\\packages\\",
-      "outputPath": "D:\\repos\\school\\202324_sew_5ahit_felixschneider\\MultiplayerGame\\MultiplayerGame\\MultiplayerGame.AppHost\\obj\\",
+      "outputPath": "D:\\repos\\school\\202324_sew_5ahit_felixschneider\\chat\\MultiplayerGame\\MultiplayerGame.AppHost\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -4374,11 +4374,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\repos\\school\\202324_sew_5ahit_felixschneider\\MultiplayerGame\\MultiplayerGame\\MultiplayerGame.ApiService\\MultiplayerGame.ApiService.csproj": {
-              "projectPath": "D:\\repos\\school\\202324_sew_5ahit_felixschneider\\MultiplayerGame\\MultiplayerGame\\MultiplayerGame.ApiService\\MultiplayerGame.ApiService.csproj"
+            "D:\\repos\\school\\202324_sew_5ahit_felixschneider\\chat\\MultiplayerGame\\MultiplayerGame.ApiService\\MultiplayerGame.ApiService.csproj": {
+              "projectPath": "D:\\repos\\school\\202324_sew_5ahit_felixschneider\\chat\\MultiplayerGame\\MultiplayerGame.ApiService\\MultiplayerGame.ApiService.csproj"
             },
-            "D:\\repos\\school\\202324_sew_5ahit_felixschneider\\MultiplayerGame\\MultiplayerGame\\MultiplayerGame.Web\\MultiplayerGame.Web.csproj": {
-              "projectPath": "D:\\repos\\school\\202324_sew_5ahit_felixschneider\\MultiplayerGame\\MultiplayerGame\\MultiplayerGame.Web\\MultiplayerGame.Web.csproj"
+            "D:\\repos\\school\\202324_sew_5ahit_felixschneider\\chat\\MultiplayerGame\\MultiplayerGame.Web\\MultiplayerGame.Web.csproj": {
+              "projectPath": "D:\\repos\\school\\202324_sew_5ahit_felixschneider\\chat\\MultiplayerGame\\MultiplayerGame.Web\\MultiplayerGame.Web.csproj"
             }
           }
         }

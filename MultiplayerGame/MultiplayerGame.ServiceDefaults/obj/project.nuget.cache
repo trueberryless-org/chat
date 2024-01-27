@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "K5H3vQ0hOM6RJAhcsKBu3+STUVEQkL9tiez4HvvidiXMk4LN3ALiRMpy2D1bDM1YLw6GiW40XOTln+fRoOdzXw==",
+  "dgSpecHash": "XXSVTyaAYE+iW6zhSsUiGOlvsczE9dpv3MeIRY0FGdOJycTSfLHch2azWnlDxQAZQUyABOuVa1+HLTEQNcsIwQ==",
   "success": true,
-  "projectFilePath": "D:\\repos\\school\\202324_sew_5ahit_felixschneider\\MultiplayerGame\\MultiplayerGame\\MultiplayerGame.ServiceDefaults\\MultiplayerGame.ServiceDefaults.csproj",
+  "projectFilePath": "D:\\repos\\school\\202324_sew_5ahit_felixschneider\\chat\\MultiplayerGame\\MultiplayerGame.ServiceDefaults\\MultiplayerGame.ServiceDefaults.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\trueb\\.nuget\\packages\\google.protobuf\\3.22.5\\google.protobuf.3.22.5.nupkg.sha512",
     "C:\\Users\\trueb\\.nuget\\packages\\grpc.core.api\\2.52.0\\grpc.core.api.2.52.0.nupkg.sha512",

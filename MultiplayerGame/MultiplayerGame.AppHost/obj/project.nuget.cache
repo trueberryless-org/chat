@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "uniKSkawGIE3u2Yu1wRmN05N5EAEwEvS/iSYJOOX48PkqHzD9OKtwRIMf0V8kavQ996YlUML8tCmQ0RDClggHQ==",
+  "dgSpecHash": "I1BnwnvRGHF5zZkUSJJN4D00VMWT9PMAdXZDAXJXgjVBLVmsuucctsfmw6iWD/hwHI9x8OCpsDlmJ351Il5QHg==",
   "success": true,
-  "projectFilePath": "D:\\repos\\school\\202324_sew_5ahit_felixschneider\\MultiplayerGame\\MultiplayerGame\\MultiplayerGame.AppHost\\MultiplayerGame.AppHost.csproj",
+  "projectFilePath": "D:\\repos\\school\\202324_sew_5ahit_felixschneider\\chat\\MultiplayerGame\\MultiplayerGame.AppHost\\MultiplayerGame.AppHost.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\trueb\\.nuget\\packages\\aspire.dashboard\\8.0.0-preview.2.23619.3\\aspire.dashboard.8.0.0-preview.2.23619.3.nupkg.sha512",
     "C:\\Users\\trueb\\.nuget\\packages\\aspire.hosting\\8.0.0-preview.2.23619.3\\aspire.hosting.8.0.0-preview.2.23619.3.nupkg.sha512",

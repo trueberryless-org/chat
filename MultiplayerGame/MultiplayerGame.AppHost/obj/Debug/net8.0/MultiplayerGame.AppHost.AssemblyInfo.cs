@@ -16,8 +16,8 @@ using System.Reflection;
     "2.23619.3\\tools\\ext")]
 [assembly: System.Reflection.AssemblyMetadata("dcpbinpath", "C:\\Program Files\\dotnet\\packs\\Aspire.Hosting.Orchestration.win-x64\\8.0.0-preview." +
     "2.23619.3\\tools\\ext\\bin")]
-[assembly: System.Reflection.AssemblyMetadata("apphostprojectpath", "D:\\repos\\school\\202324_sew_5ahit_felixschneider\\MultiplayerGame\\MultiplayerGame\\M" +
-    "ultiplayerGame.AppHost")]
+[assembly: System.Reflection.AssemblyMetadata("apphostprojectpath", "D:\\repos\\school\\202324_sew_5ahit_felixschneider\\chat\\MultiplayerGame\\MultiplayerG" +
+    "ame.AppHost")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("MultiplayerGame.AppHost")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]

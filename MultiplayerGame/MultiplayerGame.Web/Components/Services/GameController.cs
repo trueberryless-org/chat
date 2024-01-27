@@ -17,8 +17,8 @@ public class GameController : EventArgs, IDisposable, IAsyncDisposable
         PlayerTwo = playerTwo;
         Status = new GameStatus();
 
-        timer = new Timer(RaiseEvent, null, 0, 500);
         UpdateClients += HandleUpdateClients;
+        timer = new Timer(RaiseEvent, null, 0, 500);
     }
 
     public bool PlayersReady()

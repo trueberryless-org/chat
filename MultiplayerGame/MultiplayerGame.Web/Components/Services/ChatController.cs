@@ -17,8 +17,8 @@ public class ChatController : EventArgs, IDisposable, IAsyncDisposable
         ChatterTwo = chatterTwo;
         Status = new ChatStatus();
 
-        timer = new Timer(RaiseEvent, null, 0, 500);
         UpdateClients += HandleUpdateClients;
+        timer = new Timer(RaiseEvent, null, 0, 500);
     }
 
     public bool ChattersReady()
