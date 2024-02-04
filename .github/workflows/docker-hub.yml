@@ -16,8 +16,7 @@ concurrency:
 
 env:
   REGISTRY: docker.io
-  IMAGE_NAME: trueberryless/chat 
-  NODE_VERSION: 18
+  IMAGE_NAME: trueberryless/chat
 
 jobs:
   build-push-docker:
@@ -25,7 +24,7 @@ jobs:
     name: Build and push docker image to docker hub
     steps:
       - id: build-and-push-to-docker-hub
-        uses: trueberryless-org/build-and-push-to-docker-hub@main
+        uses: trueberryless-org/version-build-push-docker-action@main
         with:
           IMAGE_NAME: trueberryless/chat
           DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
