@@ -26,13 +26,13 @@ jobs:
       - id: build-and-push-to-docker-hub
         uses: trueberryless-org/version-build-push-docker-action@main
         with:
-          image-name: trueberryless/chat
+          image-name: ${{ env.IMAGE_NAME }}
           docker-username: ${{ secrets.DOCKER_USERNAME }}
           docker-password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: echo-versions
         run: |
-          echo ${{ steps.build-and-push-to-docker-hub.outputs.version }}
-          echo ${{ steps.build-and-push-to-docker-hub.outputs.version-major }}
-          echo ${{ steps.build-and-push-to-docker-hub.outputs.version-minor }}
-          echo ${{ steps.build-and-push-to-docker-hub.outputs.version-patch }}
+          echo ${{ env.version }}
+          echo ${{ env.version-major }}
+          echo ${{ env.version-minor }}
+          echo ${{ env.version-patch }}
