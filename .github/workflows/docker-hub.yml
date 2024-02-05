@@ -29,4 +29,10 @@ jobs:
           IMAGE_NAME: trueberryless/chat
           DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
           DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-      
+
+      - name: echo-versions
+        run: |
+          echo ${{ steps.build-and-push-to-docker-hub.outputs.version }}
+          echo ${{ steps.build-and-push-to-docker-hub.outputs.version-major }}
+          echo ${{ steps.build-and-push-to-docker-hub.outputs.version-minor }}
+          echo ${{ steps.build-and-push-to-docker-hub.outputs.version-patch }}
