@@ -26,9 +26,9 @@ jobs:
       - id: build-and-push-to-docker-hub
         uses: trueberryless-org/version-build-push-docker-action@main
         with:
-          IMAGE_NAME: trueberryless/chat
-          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
-          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+          image-name: trueberryless/chat
+          docker-username: ${{ secrets.DOCKER_USERNAME }}
+          docker-password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: echo-versions
         run: |
