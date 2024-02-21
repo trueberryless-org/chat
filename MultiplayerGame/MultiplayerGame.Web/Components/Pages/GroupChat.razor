@@ -74,14 +74,18 @@ else
         if (firstRender)
         {
             _chat = Matchmaking.GroupChat;
-            _chatter = _chat.Chatters.FirstOrDefault(c => c.Id == Guid.Parse(ChatterGuidString));
-
-            if (_chat != null) _chat.UpdateClients += HandleUpdateClients;
-            if (_chatter == null)
+            try
+            {
+                _chatter = _chat.Chatters.FirstOrDefault(c => c.Id == Guid.Parse(ChatterGuidString));
+                if (_chatter == null) throw new Exception();
+            }
+            catch
             {
                 await LocalStorage.DeleteAsync("groupChatId");
                 NavigationManager.NavigateTo("groupchat");
             }
+
+            if (_chat != null) _chat.UpdateClients += HandleUpdateClients;
         }
     }
 
@@ -101,7 +105,7 @@ else
     private void SendMessage()
     {
         if (string.IsNullOrWhiteSpace(newMessage) || _chat == null || _chatter == null) return;
-        
+
         _chat.Status.Messages.Add(new GroupMessage
         {
             Chatter = _chatter, // Replace with actual chatter name

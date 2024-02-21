@@ -12,10 +12,10 @@
     <h1>Enter Group Chat!</h1>
 
     <label for="name">Name:</label>
-    <input id="name" @bind="name" />
+    <input id="name" @bind="name"/>
 
     <label for="age">Age:</label>
-    <input id="age" @bind="age" />
+    <input id="age" @bind="age"/>
 
     <button @onclick="async () => await JoinGroup()" disabled="@(!IsValid)">Join</button>
 </div>
@@ -34,11 +34,11 @@
             if (chatterGuidString != null)
             {
                 var chatterGuid = Guid.Parse(chatterGuidString);
-                try
+                if (Matchmaking.GroupChat.ChatId == chatterGuid)
                 {
                     NavigationManager.NavigateTo($"groupchat/{chatterGuid}");
                 }
-                catch
+                else
                 {
                     await LocalStorage.DeleteAsync("groupChatId");
                 }
@@ -52,10 +52,11 @@
 
         // Assuming JoinGroupChat method takes name and age as parameters
         var chatterGuid = Matchmaking.JoinGroupChat(name, age);
-        
+
         // Save values to localStorage
         await LocalStorage.SetAsync("groupChatId", chatterGuid);
-        
+
         NavigationManager.NavigateTo($"groupchat/{chatterGuid}");
     }
+
 }
